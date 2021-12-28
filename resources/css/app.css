@@ -1,0 +1,178 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: 'Liberation Serif';
+    src: url('../fonts/LiberationSerif-Bold.woff2') format('woff2'),
+        url('../fonts/LiberationSerif-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberation Serif';
+    src: url('../fonts/LiberationSerif-Regular.woff2') format('woff2'),
+        url('../fonts/LiberationSerif-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Studio Sans';
+    src: url('../fonts/StudioSans-Bold.woff2') format('woff2'),
+        url('../fonts/StudioSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Studio Sans';
+    src: url('../fonts/StudioSans-Light.woff2') format('woff2'),
+        url('../fonts/StudioSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Studio Sans';
+    src: url('../fonts/StudioSans-ExtraBold.woff2') format('woff2'),
+        url('../fonts/StudioSans-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Studio Sans';
+    src: url('../fonts/StudioSans-Regular.woff2') format('woff2'),
+        url('../fonts/StudioSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+ .container{
+    margin: 0 auto;
+    min-width: 1200px;
+  } 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Liberation Serif';
+    font-weight: bold;
+    /* color: #32251A; */
+    
+   
+}
+ body{
+     margin:0;
+     padding:0;
+    background-color: gray 100;
+    font-family: 'Studio Sans';
+} 
+/* Slick slider */
+.slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider 
+.slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+.slick-track{position:relative;top:0;left:0;display:block;
+     
+    margin-right:auto}; 
+.slick-track:after,.slick-track:before{display:table;content:''}
+.slick-track:after{clear:both}.slick-loading .slick-track{visibility:hidden}
+.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-loading .slick-slide{visibility:hidden}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}
+
+.single_gallery_item{
+    height: 350px;
+}
+.thumbnail_slider{
+    text-align: left;
+}
+.single_thumbnail_item{
+    height: 120px;
+}
+button.slick-arrow {
+    display: inline-block;
+}
+
+
+button.slick-prev  {
+    display: inline-block;
+    position: absolute;
+    color: black;
+    z-index: 999;
+    top: 45%;
+    left: 2%;
+    font-size: 50px;
+}
+
+button.slick-next {
+    display: inline-block;
+    position: absolute;
+    color: black;
+    z-index: 999;
+    top: 45%;
+    right: 2%;
+    font-size: 50px;
+}
+
+.sticky-active{
+    background-color: #fff;
+  
+}
+
+.sticky-active a {
+    color: #333;
+}
+
+
+/* .section-heading{
+     @apply font-bold text-center text-5xl
+    
+} 
+ */
+
+ .single_search> form> div {
+    display: block;
+    width: 100%;
+}
+
+.single_search> form> div> div {
+    display: block;
+}
+
+.single_search> form> div> div> option {
+   border:none;
+}
+
+.single_search> form {
+    display: block;
+    width: 100%;
+}
+.single_search> form> div {
+    display: block;
+}
+
+.single_search >form> div> div {
+    display: block;
+    margin-bottom: 8px;
+
+}
+.single_search >form> div> div.border-gray-500 {
+    display: none;
+}
+
+
+.single_search >form> div> div>select {
+    width: 100%;
+}
+.single_search> form> div.ml-5 {
+    margin-left: 0px;
+}
+
+.single_search >form> div> div label {
+    display: block;
+    margin-bottom: 6px;
+}
