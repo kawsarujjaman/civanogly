@@ -32137,6 +32137,10 @@ select {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 @font-face {
   font-family: 'Liberation Serif';
 
@@ -32425,6 +32429,45 @@ button.slick-next {
 .single_search >form> div> div label {
   display: block;
   margin-bottom: 6px;
+}
+
+.civanogly-label{
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity))
+}
+
+.civanogly-input{
+  width: 100%;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(107, 114, 128, var(--tw-border-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem
+}
+
+.single_search >form> div> div.civanogly-input {
+  display: none;
+}
+
+.btn{
+  display: inline-block;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
 @media (min-width: 640px) {
@@ -188866,4 +188909,3 @@ button.slick-next {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
-

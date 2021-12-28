@@ -43,8 +43,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/dashboard',[ DashboardController::class, 'index'])->name('dashboard-index');
+
     Route::get('/admin/properties',[ DashboardController::class, 'properties'])->name('dashboard-properties');
+
     Route::get('/admin/add-property',[ DashboardController::class, 'addProperty'])->name('add-property');
+
+    Route::post('/admin/create-property',[ DashboardController::class, 'createProperty'])->name('create-property');
+
 
     });
 

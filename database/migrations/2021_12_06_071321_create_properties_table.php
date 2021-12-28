@@ -24,8 +24,9 @@ class CreatePropertiesTable extends Migration
             $table->unsignedBigInteger('price');
             $table->unsignedBigInteger('sale')->default(1)->comment('0=rent, 1=sale');
             $table->unsignedBigInteger('type')->default(1)->comment('0=land,1=apertment,2=villa') ;
-            $table->unsignedBigInteger('bedrooms')->nullable();
-            $table->unsignedBigInteger('bathroms')->nullable();
+
+            $table->string('bedrooms')->nullable();
+            $table->unsignedBigInteger('bathrooms')->nullable();
             $table->unsignedBigInteger('net_sql')->nullable();
             $table->unsignedBigInteger('gross_sql')->nullable();
             $table->unsignedBigInteger('poll')->nullable()->comment('0=no,1=privet,2=public,3=both');
@@ -35,9 +36,9 @@ class CreatePropertiesTable extends Migration
             $table->string('overview_tr');
 
             $table->longText('whyBuy')->nullable();
-            $table->longText('Description');
-            $table->longText('Description_bn');
-            $table->longText('Description_tr');
+            $table->longText('description');
+            $table->longText('description_bn');
+            $table->longText('description_tr');
 
             
 

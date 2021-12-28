@@ -149,7 +149,7 @@
                                     <div class="flex"><i
                                             class="fa fa-shower mr-2 text-red-400 w-5 text-center"></i><span
                                             class="text-sm">Bathrooms:</span></div>
-                                    <span class="ml-2 font-bold"> {{$property->bathroms}} </span>
+                                    <span class="ml-2 font-bold"> {{$property->bathrooms}} </span>
                                 </li>
                                 <li class="flex text-sm">
                                     <div class="flex"><i
