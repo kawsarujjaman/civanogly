@@ -50,6 +50,8 @@ Route::middleware(['auth'])->group(function(){
 
     Route::post('/admin/create-property',[ DashboardController::class, 'createProperty'])->name('create-property');
 
+    Route::get('/admin/edit-property/{id}',[ DashboardController::class, 'editProperty'])->name('edit-property');
+
 
     });
 

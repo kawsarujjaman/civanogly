@@ -16,7 +16,7 @@
     </div>
     <div class="min-w-max text-3xl">
         <a href="{{ LaravelLocalization::getLocalizedURL('en') }}">🇺🇸</a>
-        <a href="{{ LaravelLocalization::getLocalizedURL('tr') }}"> 🇹🇷 </a>
+        <a href=""> 🇹🇷 </a>
         <a href="{{ LaravelLocalization::getLocalizedURL('bn') }}">🇧🇩</a>
     </div>
 

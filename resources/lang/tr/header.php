@@ -1,9 +1,0 @@
-<?php
-
-return [
-    'villa' => 'TrVilla',
-];
-
-
-
-
