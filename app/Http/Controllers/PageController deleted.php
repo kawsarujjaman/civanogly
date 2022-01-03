@@ -7,7 +7,7 @@ use App\Models\page;
 
 class PageController extends Controller
 {
-    //
+    
     public function single($slug) {
         $page = page::where('slug', $slug)->first();
 

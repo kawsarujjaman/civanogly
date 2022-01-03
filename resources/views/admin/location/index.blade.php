@@ -2,12 +2,12 @@
     <x-slot name="header">
        <div class="flex justify-between item-center">
        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Properties') }}
+            {{ __('Locations') }}
         </h2>
-            <div class="min-w-max">
+            <!-- <div class="min-w-max">
                 <a class="fullwidth-btn bg-black text-white px-4 py-2 rounded" href="{{route('add-property')}}"> Add New Property </a>
             
-             </div>
+             </div> -->
        </div>
     </x-slot>
 
@@ -18,24 +18,20 @@
                   <table class="table w-full table-auto mb-6">
                       <thead>
                           <tr>
-                              <th class="border px-4 py-2"> Name </th>
-                              <th class="border px-4 py-2"> Location </th>
-                              <th class="border px-4 py-2"> Price </th>
+                              <th class="border px-4 py-2"> Name </th>                            
                               <th style="width:250px" class="border px-4 py-2"> Action </th>
                           </tr>
                       </thead>
 
                       <tbody>
-                         @foreach($properties as $property)
+                         @foreach($locations as $location)
                           <tr>
-                              <td class="border px-4 py-2"> {{$property->name}} </td>
-                              <td class="border px-4 py-2"> {{$property->location->name}} </td>
-                              <td class="border px-4 py-2"> {{$property->price}} </td>
+                              <td class="border px-4 py-2"> {{$location->name}} </td>
                               <td class="border px-4 py-2">
-                                   <a class="bg-blue-500 text-white px-4 py-2 text-sm rounded" href="{{route('edit-property', $property->id)}}"> Edit</a>
-                                   <a class="bg-green-500 text-white px-4 py-2 text-sm rounded" href=" {{route('single_property', $property->id)}}" target="_blank" > View</a> 
+                                   <a class="bg-blue-500 text-white px-4 py-2 text-sm rounded" href="{{route('edit-location', $location->id)}}"> Edit</a>
+                                   <a class="bg-green-500 text-white px-4 py-2 text-sm rounded" href=" " target="_blank" > View</a> 
 
-                                   <form action="{{route('delete-property', $property->id)}}" method="post" onclick="return confirm('Do you really want to delete the property')" class="inline-block"> @csrf
+                                   <form action="{{route('delete-location', $location->id)}}" method="post" onclick="return confirm('Do you really want to delete the location')" class="inline-block"> @csrf
                                        <button class="bg-red-500 text-white px-4 py-2 text-sm rounded"  type="submit"> Delete </button>
                                    </form>
                                   
@@ -46,7 +42,7 @@
                          @endforeach
                       </tbody>
                   </table>
-               {{$properties->links()}}
+             
 
                 </div>
             </div>

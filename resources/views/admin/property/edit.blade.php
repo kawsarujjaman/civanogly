@@ -15,7 +15,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-            <form action="{{route('create-property')}}" method="post" class="p-6 bg-white border-b border-gray-200"> @csrf
+            <form action="{{route('update-property', $property->id)}}" method="post" class="p-6 bg-white border-b border-gray-200"> @csrf
 
                     <div class="flex -mx-4 mb-6">
                         <div class="flex-1 px-4">
@@ -56,8 +56,17 @@
                             
                             <div class="flex">
                             @foreach($property->gallery as $gallery)
-                                <div class="mr-4">
-                                    <img src="/storage/uploads/{{$gallery->name}}" alt="">
+                                <div class="mr-4 mt-3 w-36 item-center justify-center relative h-full">
+                                    <img style="height:80px" src="/storage/uploads/{{$gallery->name}}" alt="">
+                                   
+
+                                    <form action="{{route('delete-media', $gallery->id)}}"  method="post" onsubmit="return confirm('Do you want to delete the image?');"  class="absolute right-0 left-0 " > @csrf
+
+                                        <button type="submit" class="text-white bg-red-600 text-xs px-3 py-1"> Delete </button>
+                                    </form>
+
+
+
                                 </div>
                             @endforeach
                             </div>
@@ -257,7 +266,7 @@
                         </div>
                     </div>
 
-                    <button class=" btn" type="submit"> Save Property</button>
+                    <button class=" btn m-4" type="submit"> Update Property </button>
 
 
 

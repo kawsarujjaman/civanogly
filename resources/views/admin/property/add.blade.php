@@ -236,7 +236,7 @@
                         </div>
                     </div>
 
-                    <button class=" btn" type="submit"> Save Property</button>
+                    <button class=" btn m-4" type="submit"> Save Property</button>
 
 
 
