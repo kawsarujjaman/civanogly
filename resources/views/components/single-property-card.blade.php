@@ -4,7 +4,7 @@
                     
                     <div class=" p-4">
                         <h3 class="font-bold mb-4 text-xl"> {{$property->name}} </h3>
-                        <h3 class="font-bold mb-4 text-2xl"> $ {{$property->price}} </h3>
+                        <h3 class="font-bold mb-4 text-2xl">  {{$property->dynamic_pricing($property->price)}} </h3>
 
                        <div class="button inline-block">
                            

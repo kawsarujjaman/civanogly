@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\page;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Flasher\Prime\FlasherInterface;
+
 
 class PageController extends Controller
 {
@@ -14,7 +17,8 @@ class PageController extends Controller
      */
     public function index()
     {
-        return "ok";
+        $pages= page::latest()->paginate(20);
+        return view('admin.page.index', ['pages'=>$pages]);
     }
 
     /**
@@ -78,8 +82,12 @@ class PageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, FlasherInterface $flasher )
     {
-        //
+        $page= page::findOrFail($id);
+        $page->delete();
+
+        $flasher->addSuccess('Page has been deleted');
+        return back();
     }
 }

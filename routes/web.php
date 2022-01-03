@@ -32,6 +32,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     Route::get('/page/{slug}', [HomeController::class, 'single'] )->name(name: 'page');
 
     Route::post('/property-inquiry/{id}', [ContactController::class, 'propertyInquiry'] )->name(name: 'property-inquiry');
+
+    Route::get('/currency/{code}', [HomeController::class, 'currencyChange'] )->name(name: 'currency-change');
+
 	
 });
 
@@ -61,7 +64,7 @@ Route::middleware(['auth'])->group(function(){
 
     Route::post('/admin/delete-media/{media_id}',[ DashboardController::class, 'deleteMedia'])->name('delete-media');
 
-    Route::get('/admin/locations/index',[ DashboardController::class, 'index'])->name('dashboard-locations');
+    Route::get('/admin/locations',[ DashboardController::class, 'locations'])->name('dashboard-locations');
     Route::get('/admin/add-location',[ DashboardController::class, 'addLocation'])->name('add-location');
     Route::post('/admin/create-location',[ DashboardController::class, 'createLocation'])->name('create-location');
     Route::post('/admin/update-location/{id}',[ DashboardController::class, 'updateLocation'])->name('update-location');
