@@ -167,8 +167,4 @@ public function deleteProperty($property_id){
         return view('admin.location.index', ['locations'=> $locations]);
     }
     
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 }

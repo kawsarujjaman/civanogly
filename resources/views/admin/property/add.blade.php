@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 <x-app-layout>
     <x-slot name="header">
 
@@ -19,10 +16,9 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-<<<<<<< HEAD
-=======
 
->>>>>>> main
+
+
             <form action="{{route('create-property')}}" method="post" class="p-6 bg-white border-b border-gray-200" enctype="multipart/form-data"> @csrf
 
                     <div class="flex -mx-4 mb-6">
@@ -39,10 +35,7 @@
                             <input class=" civanogly-input" type="text" id="name_tr" name="name_tr" value="{{old('name')}}" required >
 
                             @error('name_tr')
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
                             @enderror
                             
@@ -53,19 +46,12 @@
                     <div class="mb-6">
                         <label class=" civanogly-label"for="featured_image">Featured Image  <span class="required-text">*</span></label>
                             <input class=" civanogly-input" type="file" id="featured_image" name="featured_image" required>
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             @error('featured_image')
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
                             @enderror
                     </div>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> main
                     <div class="mb-6">
                         <label class=" civanogly-label"for="gallery_image">Gallery Image  <span class="required-text">*</span></label>
                             <input class=" civanogly-input" type="file" id="gallery_image" name="gallery_image[]" multiple required>
@@ -83,10 +69,7 @@
                                @foreach($locations as $location)
                                 <option {{old('location_id') == $location->id  ? 'selected="selected"':''}} value="{{$location->id}}" > {{ $location->name}} </option>
                                 @endforeach
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             </select>
                             
                             @error('location_id')
@@ -97,10 +80,7 @@
                         <div class="flex-1 px-4">
                             <label class=" civanogly-label"for="price"> Price  <span class="required-text">*</span></label>
                             <input class=" civanogly-input" type="number" id="price" name="price"  value="{{old('price')}}" required >
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             @error('price')
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
                             @enderror
@@ -111,10 +91,7 @@
                                 <option  value="">Select Type</option>
                                 <option {{old('sale')== '0' ? 'selected="selected"':''}} value="0">Rent</option>
                                 <option {{old('sale')== '1' ? 'selected="selected"':'' }} value="0">Sale</option>                                
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             </select>
                             @error('sale')
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
@@ -129,10 +106,6 @@
                                 <option {{old('type')== '1' ? 'selected="selected"':'' }} value="1">Apperment</option>
                                 <option {{old('type')== '2' ? 'selected="selected"':'' }} value="2">Villa</option>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> main
                             </select>
                             @error('type')
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
@@ -145,10 +118,6 @@
 
                     <div class="flex -mx-4 mb-6">
                         <div class="flex-1 px-4">
-<<<<<<< HEAD
-=======
-
->>>>>>> main
                             <label class=" civanogly-label"for="drawingrooms"> Drawing Rooms</label>
                             <select class=" civanogly-input" name="drawingrooms" id="drawingrooms" required>
                                 <option  value="">Select One</option>
@@ -169,10 +138,7 @@
                                 @for($x=0; $x<=8; $x++)
                                 <option {{old('bedrooms')== $x ? 'selected="selected"' : ''}} value="{{$x}}"> {{$x}} </option>                                
                                 @endfor                                 
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             </select>
                             
                             @error('bedrooms')
@@ -182,19 +148,13 @@
 
                         <div class="flex-1 px-4">
                             <label class=" civanogly-label"for="bathrooms"> Bathrooms </label>
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             <select class=" civanogly-input" name="bathrooms" id="bathrooms" required>
                                 <option  value="">Select Bathrooms</option>
                                 <option  {{old('bathrooms')== '1' ? 'selected="selected"':'' }} value="1">1</option>
                                 <option {{old('bathrooms')== '2' ? 'selected="selected"':'' }}  value="2">2</option>
                                 <option {{old('bathrooms')== '3' ? 'selected="selected"':'' }}  value="3">3</option>                                
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             </select>
                             @error('bathrooms')
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
@@ -205,36 +165,24 @@
                             <input class=" civanogly-input" type="number" id="net_sqm" name="net_sqm" value="{{old('net_sqm')}}" required >
 
                             @error('net_sqm')
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
                             @enderror
                         </div>
 
                         <div class="flex-1 px-4">
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             <label class=" civanogly-label"for="gross_sqm">  Gross Sqaure Metter </label>
                             <input class=" civanogly-input" type="number" id="gross_sqm" name="gross_sqm" value="{{old('gross_sqm')}}" required >
 
                             @error('gross_sqm')
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
                             @enderror
                         </div>
                         
                         <div class="flex-1 px-4">
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             <label class=" civanogly-label"for="pool"> Pool  <span class="required-text">*</span></label>
                             <select class=" civanogly-input" name="pool" id="pool" required>
                                 <option  value=""> Select Pool</option>
@@ -244,10 +192,7 @@
                                 <option  {{old('pool')== '4' ? 'selected="selected"':'' }} value="4">both</option>                                                             
                             </select>
                             @error('pool')
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
                             @enderror
                         </div>
@@ -257,27 +202,19 @@
                         <div class="flex-1 px-4">
                             <label class=" civanogly-label"for="overview">Overview  <span class="required-text">*</span> </label>
                            <textarea class=" civanogly-input" name="overview" id="overview" cols="50" rows="3" required > {{old('overview')}} </textarea>
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                             @error('overview')
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
                             @enderror
                         </div>
 
                         <div class="flex-1 px-4">
-<<<<<<< HEAD
-                            <label class=" civanogly-label"for="overview_tr"> Overview TR  <span class="required-text">*</span> </label>
-                           <textarea class=" civanogly-input" name="overview_tr" id="overview_tr" cols="50" rows="3" required> {{old('overview_tr')}} </textarea>
-                            @error('overview_tr')
-=======
 
                             <label class=" civanogly-label"for="overview_tr"> Overview TR  <span class="required-text">*</span> </label>
                            <textarea class=" civanogly-input" name="overview_tr" id="overview_tr" cols="50" rows="3" required> {{old('overview_tr')}} </textarea>
                             @error('overview_tr')
 
->>>>>>> main
+
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
                             @enderror
                         </div>
@@ -286,33 +223,24 @@
 
                     <div class="flex -mx-4 mb-6">
                         <div class="flex-1 px-4">
-<<<<<<< HEAD
-                            <label class=" civanogly-label"for="why_buy">Why Buy <span class="required-text">*</span> </label>
-                           <textarea class=" civanogly-input" name="why_buy" id="why_buy" cols="50" rows="4" required > {{old('why_buy')}} </textarea>
-                            @error('why_buy')
-=======
+
 
                             <label class=" civanogly-label"for="why_buy">Why Buy <span class="required-text">*</span> </label>
                            <textarea class=" civanogly-input" name="why_buy" id="why_buy" cols="50" rows="4" required > {{old('why_buy')}} </textarea>
                             @error('why_buy')
 
->>>>>>> main
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
                             @enderror
                         </div>
 
                         <div class="flex-1 px-4">
-<<<<<<< HEAD
-                            <label class=" civanogly-label"for="why_buy_tr"> Why Buy TR  <span class="required-text">*</span></label>
-                           <textarea class=" civanogly-input" name="why_buy_tr" id="why_buy_tr" cols="50" rows="4" required> {{old('why_buy_tr')}} </textarea>
-                            @error('why_buy_tr')
-=======
+
 
                             <label class=" civanogly-label"for="why_buy_tr"> Why Buy TR  <span class="required-text">*</span></label>
                            <textarea class=" civanogly-input" name="why_buy_tr" id="why_buy_tr" cols="50" rows="4" required> {{old('why_buy_tr')}} </textarea>
                             @error('why_buy_tr')
 
->>>>>>> main
+
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
                             @enderror
                         </div>
@@ -321,49 +249,35 @@
 
                     <div class="flex -mx-4 mb-6">
                         <div class="flex-1 px-4">
-<<<<<<< HEAD
-                            <label class=" civanogly-label"for="description">Description  <span class="required-text">*</span></label>
-                           <textarea class=" civanogly-input" name="description" id="description" cols="50" rows="5" required> {{old('description')}} </textarea>
-=======
+
 
                             <label class=" civanogly-label"for="description">Description  <span class="required-text">*</span></label>
                            <textarea class=" civanogly-input" name="description" id="description" cols="50" rows="5" required> {{old('description')}} </textarea>
 
->>>>>>> main
+
                             @error('description')
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
                             @enderror
                         </div>
 
                         <div class="flex-1 px-4">
-<<<<<<< HEAD
-                            <label class=" civanogly-label"for="description_tr">  Description TR  <span class="required-text">*</span></label>
-                           <textarea class=" civanogly-input" name="description_tr" id="description_tr" cols="50" rows="5" required> {{old('description_tr')}} </textarea>
-                            @error('description_tr')
-=======
+
 
                             <label class=" civanogly-label"for="description_tr">  Description TR  <span class="required-text">*</span></label>
                            <textarea class=" civanogly-input" name="description_tr" id="description_tr" cols="50" rows="5" required> {{old('description_tr')}} </textarea>
                             @error('description_tr')
 
->>>>>>> main
+
                             <p class="text-red-500 mt-2 text-sm"> {{$message}}</p>
                             @enderror
                         </div>
                     </div>
 
-<<<<< HEAD
-=======
-
->>>>>>> main
                     <button class=" btn m-4" type="submit"> Save Property</button>
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> main
                 </form>
             </div>
         </div>
