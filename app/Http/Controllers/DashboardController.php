@@ -26,6 +26,7 @@ class DashboardController extends Controller
         return view('admin.property.add', ['locations'=>$locations]);
     }
 
+  
     public function validateProperty(){
         return[
             'name' => 'required',
@@ -163,7 +164,11 @@ public function deleteProperty($property_id){
 
     public function locations(){
         $locations = location::all();
-        return view('admin/locations', ['locations'=> $locations]);
+        return view('admin.location.index', ['locations'=> $locations]);
     }
+    
+<<<<<<< HEAD
+=======
 
+>>>>>>> main
 }

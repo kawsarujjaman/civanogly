@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\ProcessContactMail;
 use App\Mail\contactMail;
 use App\Models\contact;
 use Illuminate\Http\Request;
@@ -24,7 +25,9 @@ class ContactController extends Controller
         $contact->message= $request->message .' This has been message sent via '. route('single_property', $property_id). 'website.' ;
         $contact->save();
 
-        Mail::send(new contactMail($contact));
+        //Send user and admin message via queue
+        ProcessContactMail::dispatch($contact);
+        //Mail::send(new contactMail($contact));
         
         return redirect(route('single_property', $property_id))->with('message', 'Your message has been sent');
 

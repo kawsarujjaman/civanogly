@@ -25,7 +25,7 @@
                 <li class="mx-3"><i class="fa fa-angle-right"></i></li>
                 <li><a class="text-base text-red-800" href="#">Property</a></li>
                 <li class="mx-3"><i class="fa fa-angle-right"></i></li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+                <li>{{ $property->name }}</li>
             </ul>
         </div>
     </div>
@@ -37,7 +37,7 @@
                 <div class="w-8/12">
                     <h2 class="text-3xl text-gray-600"> {{ $property->name }} </h2>
                     <h3 class="text-lg mt-2">Price: <span class="text-red-800">                      
-                        {{ number_format($property->price, 2, ',', ',') }} TL                   
+                    {{$property->dynamic_pricing($property->price)}}                   
                 </span></h3>
                 </div>
 
