@@ -23,17 +23,17 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
-    Route::get('/', [HomeController::class, 'home'] )->name(name: 'home');
+    Route::get('/', [HomeController::class, 'home'] )->name('home');
 
-    Route::get('/property/{id}', [PropertyController::class, 'single_property'] )->name(name: 'single_property');
+    Route::get('/property/{id}', [PropertyController::class, 'single_property'] )->name('single_property');
 
-    Route::get('/properties', [PropertyController::class, 'index'] )->name(name: 'properties');
+    Route::get('/properties', [PropertyController::class, 'index'] )->name('properties');
 
-    Route::get('/page/{slug}', [HomeController::class, 'single'] )->name(name: 'page');
+    Route::get('/page/{slug}', [HomeController::class, 'single'] )->name('page');
 
-    Route::post('/property-inquiry/{id}', [ContactController::class, 'propertyInquiry'] )->name(name: 'property-inquiry');
+    Route::post('/property-inquiry/{id}', [ContactController::class, 'propertyInquiry'] )->name('property-inquiry');
 
-    Route::get('/currency/{code}', [HomeController::class, 'currencyChange'] )->name(name: 'currency-change');
+    Route::get('/currency/{code}', [HomeController::class, 'currencyChange'] )->name('currency-change');
 
 	
 });
