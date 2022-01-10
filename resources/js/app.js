@@ -42,10 +42,13 @@ jQuery(document).ready(function ($){
     focusOnSelect: true
 });
 
- $(".civanogly-mobile-menu, .civanogly-main-menu a").on("click", function(){
-    $(".civanogly-main-menu").toggleClass("active");
-})
+   
 
 });
 
+
+
+$('.civanogly-mobile-menu , .civanogly-main-menu a').on('click', function () {
+    $('.civanogly-main-menu').toggleClass('active');
+});
 

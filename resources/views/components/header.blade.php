@@ -5,7 +5,7 @@
         </a>
     </div>
 
-    <div class="w-full absolute top-20 left-0 md:relative md:top-0 civanogly-main-menu">
+    <div class="w-full absolute top-20 left-0 md:relative md:top-0 civanogly-main-menu " id="">
         <ul class="md:flex inline-grid justify-center ">
             <li class="inline-block p-4"> <a href="{{Route('properties')}}?type=0">Land</a> </li>
             <li class="inline-block p-4" > <a href="{{Route('properties')}}?type=2"> {{__('header.villa')}} </a> </li>

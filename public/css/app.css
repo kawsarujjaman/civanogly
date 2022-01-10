@@ -32139,7 +32139,8 @@ select {
 
 /* @tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities; 
+ */
 
 @font-face {
   font-family: 'Liberation Serif';
@@ -32221,7 +32222,17 @@ select {
 
 .container{
   margin: 0 auto;
-  min-width: 1200px;
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -32381,11 +32392,20 @@ button.slick-next {
   color: #333;
 }
 
-/* .section-heading{
-     @apply font-bold text-center text-5xl
-    
-} 
- */
+.section-heading{
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700
+}
+
+@media (min-width: 768px) {
+  .section-heading {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
 
 .single_search> form> div {
   display: block;
@@ -32468,6 +32488,25 @@ button.slick-next {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity))
+}
+
+@media only screen and (max-width: 767px) {
+  .single_gallery_item{
+    height: 300px;
+  }
+
+  .civanogly-mobile-menu{
+    display: block;
+  }
+
+  .civanogly-main-menu {
+    display: none;
+  }
+
+  .civanogly-main-menu.active{
+    display: block;
+    background-color: white;
+  }
 }
 
 @media (min-width: 640px) {
