@@ -1,12 +1,6 @@
 <x-guest-layout>
     <style>
-/* 
-        #header_area a {
-            color: #000;
-        }
-        #header_area a:hover{
-            color: #991b1b;
-        } */
+
         
 .general-header {
     background: white;
@@ -61,7 +55,7 @@
          <div class="w-2/3"> 
             <div class="flex flex-wrap mb-6 mx-4">
                 @foreach($latest_properties as $property )
-                    @include('components.single-property-card', ['property'=> $property])     
+                    @include('components.single-property-card', ['property'=> $property, 'width'=> 'md:w-1/4 w-full'])     
                 
                 @endforeach
             </div>

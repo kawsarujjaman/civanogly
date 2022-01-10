@@ -1,7 +1,7 @@
-<div class="container ">
+<div class="container contents ">
     <h2 class="section-heading font-bold text-center text-3xl mb-10 mt-5"> Article & Advices </h2>
-    <div class="flex mx-4">
-        <div class="flex-1 px-4">
+    <div class="md:flex mx-4">
+        <div class="flex-1 px-4 mb-6">
             <div class="bg-white rounded-xl flex">
                 <div style="min-width:130px" class=" ">
                     <img style="width:130px" src=" {!! asset('img/property1.jpeg') !!} " alt="">
@@ -43,32 +43,32 @@
             </div>
         </div>
     </div>
-    <h2 class="section-heading font-bold text-center text-3xl mb-10 mt-5 py-12"> Aditional Services </h2>
+    <h2 class="section-heading font-bold text-center text-3xl my-6 py-6"> Aditional Services </h2>
 
     <div class="border-b-2  pb-10 mb-5">
-    <div class="flex ">
-        <div class="flex-1 pl-4 ">
-            <a class="underline" href=""> Trust managment of investments</a>
+        <div class="md:flex ml-8">
+            <div class="flex-1  mb-2 ">
+                <a class="underline" href=""> Trust managment of investments</a>
+            </div>
+            <div class="flex-1  mb-2">
+                <a class="underline" href=""> Excursion to the object </a>
+            </div>
+            <div class="flex-1  mb-2">
+                <a class="underline" href=""> Assistance in obtaining a visa </a>
+            </div>
+            <div class="flex-1  mb-2">
+                <a class="underline" href=""> Mortgage registration</a>
+            </div>
         </div>
-        <div class="flex-1 pl-4">
-            <a class="underline" href=""> Excursion to the object </a>
-        </div>
-        <div class="flex-1 pl-4">
-            <a class="underline" href=""> Assistance in obtaining a visa </a>
-        </div>
-        <div class="flex-1 pl-4">
-            <a class="underline" href=""> Mortgage registration</a>
-        </div>
-    </div>
     </div>
 
-   <div class="flex">
+   <div class="md:flex md:ml-8">
        <div class=" w-1/4 pr-6">
             <img width="120" src= "{!! asset('img/logo.png') !!} " alt="">
        </div>
        <div class=" w-3/4 ">
-           <div class="flex -mx-6 font-bold">
-               <div class="flex-1 px-6">
+           <div class="flex mx-0 md:-mx-6 font-bold">
+               <div class="flex-1 px-4 md:px-6">
                    <ul class="justify-centre">
                        <li class=" " > <a href="">For Inveators</a> </li>
                        <li class="" > <a href="">For Agents</a> </li>
@@ -76,7 +76,7 @@
                    </ul>
                </div>
 
-               <div class="flex-1 px-6">
+               <div class="flex-1 px-4 md:px-6">
                    <ul class="justify-centre">
                        <li class=" " > <a href=""> About </a> </li>
                        <li class="" > <a href=""> Contacts</a> </li>
@@ -84,7 +84,7 @@
                    </ul>
                </div>
 
-               <div class="flex-1 px-6">
+               <div class="flex-1 px-4 md:px-6">
                    <ul class="justify-centre">
                        <li class=" " > <a href="">Blog</a> </li>
                        <li class="" > <a href=""> Partnership</a> </li>
@@ -99,10 +99,10 @@
        </div>
       
    </div>
-   <p class="ml-6 pb-6">
+   <p class="my-8 ml-8 pb-6">
    Copyright &copy; <script>document.write(new Date().getFullYear())</script> BuyProperty All Rights Reserved  
        </p>
 </div>
-<div class="footer-img w-full m-auto">
-        <img class="w-full h-36" src="{!! asset('img/footer.jpg' )!!}" alt="">
+<div class="footer-img md:object-scale-down m-auto contents">
+        <img class="w-full h-36   " src="{!! asset('img/footer.jpg' )!!}" alt="">
 </div>

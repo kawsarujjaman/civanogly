@@ -85,14 +85,21 @@
                     <div class="gallary_slider">
 
                         @foreach($property->gallery as $gallery)
-                        <div style="background-image:url({{$gallery->name}})" class="single_gallery_item bg-cover bg-center " > </div>
+                         <div class="single_gallery_item bg-cover bg-center">
+                            <img src="{{ Storage::url('public/'.$gallery->name)}}" alt="{{$gallery->name}}">
+                           
+                        </div> 
+                        
                         @endforeach
-                      
+
+                       
+
+
                     </div>
 
                     <div class="thumbnail_slider pt-10 ">
                         @foreach($property->gallery as $gallery)
-                        <div style="background-image:url({{$gallery->name}})" class="single_thumbnail_item bg-cover bg-center mr-7 " > </div>
+                        <div style="background-image: url({{$gallery->name}})" class="single_thumbnail_item bg-cover bg-center mr-7 " > </div>
                          @endforeach
                     </div>
 
